@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            width: 50%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+</header>
+
+<nav>
+    <a href="#resume">Resume Upload</a>
+    <a href="#registration">Registration Form</a>
+    <a href="#nested-table">Nested Table</a>
+</nav>
+
+<section id="resume">
+    <h2>Resume Upload Form</h2>
+    <p><strong>Description:</strong> This section allows users to upload their resume in various formats. It helps in showcasing skills and experience in a professional format.</p>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="resume">Upload Resume (PDF, DOC, TXT):</label><br>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.txt" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section id="registration">
+    <h2>Registration Form</h2>
+    <p><strong>Description:</strong> This form helps individuals register their personal and academic details. It ensures organized data collection for professional or academic purposes.</p>
+    <form>
+        <label>First Name:</label>
+        <input type="text" name="firstname"><br><br>
+
+        <label>Last Name:</label>
+        <input type="text" name="lastname"><br><br>
+
+        <label>ID:</label>
+        <input type="text" name="studentID"><br><br>
+
+        <label>Address:</label>
+        <input type="text" name="Address"><br><br>
+
+        <label>Phone:</label>
+        <input type="text" name="PHno"><br><br>
+
+        <label>City:</label>
+        <select name="city">
+            <option value="">Select City</option>
+            <option value="bulbula">Bulbula</option>
+            <option value="robe">Robe</option>
+            <option value="goba">Goba</option>
+        </select><br><br>
+
+        <label>Department:</label>
+        <select name="department">
+            <option>Select Department</option>
+            <option value="information technology">IT</option>
+            <option value="information system">IS</option>
+            <option value="computer science">CS</option>
+        </select><br><br>
+
+        <label>Sex:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<section id="nested-table">
+    <h2>Nested Table</h2>
+    <p><strong>Description:</strong> This table represents structured data with subcategories inside each entry. It can be useful for organizing different properties of a project or dataset.</p>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Project 1</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Color</td>
+                        <td>Red</td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td>Medium</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</section>
+
+</body>
+</html>

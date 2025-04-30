@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="SIGN CSS.css">
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="newUsername" placeholder="Enter Your Full Name" required>
+            
+            <label for="Email">Email Address:</label>
+            <input type="email" id="EmailAddress" name="Email" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" required>
+
+            <div class="sex-selection">
+                <label for="SEX">Gender:</label>
+                <input type="radio" id="male" name="SEX" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="SEX" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let username = document.getElementById("newUsername").value;
+            let password = document.getElementById("newPassword").value;
+
+            if (username && password) {
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+                alert("Signup successful! Redirecting to EXTERNAL HOME 2.html...");
+                window.location.href = "EXTERNAL HOME 2.html"; // Redirects to login page
+            }
+        });
+    </script>
+</body>
+</html>
